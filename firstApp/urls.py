@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^random_cards/$', views.random_cards),
     url(r'^form_test/$', views.form_test),
     url(r'^form_card/$', views.form_card),
+    url(r'^login/$', views.login),
 ]

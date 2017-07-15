@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template.context_processors import csrf
+import firstApp.redis_helper as r
+import random
 
 # Create your views here.
 def hello(request):
@@ -76,3 +78,25 @@ def form_card(request):
         dictionary = {'suit':suit, 'rank':rank}
         print(suit,rank)
         return render(request,'display_card2.html', dictionary)
+
+
+#ログインシステム
+
+def login(request):
+    if request.method == 'GET':
+        if request.session.get('token', False):
+            token = request.session['token']
+            name = r.get_value(token)
+            return welcome2(request, name)
+
+        else:
+            request.session['token'] = str(random.random())
+            dictionary = {}
+            dictionary.update(csrf(request))
+            return render(request, 'form.html', dictionary)
+
+    elif request.method == 'POST':
+        token = request.session['token']
+        name = request.POST['name']
+        r.set_value(token, name)
+        return welcome2(request, name)
