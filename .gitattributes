@@ -1,2 +1,1 @@
-special-vendored-path/* linguist-vendored
-firstApp/templates/ linguist-vendored=false
+*.rb linguist-language=Java
