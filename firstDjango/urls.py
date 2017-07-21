@@ -20,4 +20,5 @@ from django.conf.urls import include
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^firstApp/', include('firstApp.urls')),
+    url(r'^BJ/', include('BJGame.urls')),
 ]
