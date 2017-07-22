@@ -15,7 +15,7 @@ herokuにデプロイしようとして、変更を行いまくったが、PUSH�
 
 # 遊び方
 manage.pyがあるディレクトリで、
-```
+```python
     python manage.py runserver
 ```
 （ちなみに、Macだと　`redis-server` でRedisも起動しておかないと動かない）
