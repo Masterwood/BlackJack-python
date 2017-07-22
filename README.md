@@ -16,7 +16,7 @@ herokuにデプロイしようとして、変更を行いまくったが、PUSH�
 # 遊び方
 manage.pyがあるディレクトリで、
     python manage.py runserver
-（ちなみに、Macだと　"redis-server" でRedisも起動しておかないと動かない）
+（ちなみに、Macだと　'redis-server' でRedisも起動しておかないと動かない）
 
 ブラウザーで、 ローカルサーバーの　http://xxx.xxx.xxx.xxx:8000/BJ/game/
 にアクセスすれば、圧倒されるほどしょぼいブラックジャックが楽しめるよ〜
